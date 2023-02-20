@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'fr.ostix'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.github.stellar:java-stellar-sdk:0.38.0'
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.2.1'
+    implementation 'com.google.guava:guava:30.0-android'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.14.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.10.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
